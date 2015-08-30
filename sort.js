@@ -7,13 +7,14 @@
 
 	header.find('.list_elem_col_head')
 		.wrapInner('<a href="#"></a>')
+		.find('a')
 		.click(userActionClickSort);
 
 	function userActionClickSort() {
 		var newField,
 			pattern = 'list_elem_col list_elem_col_head list_elem_';
-		if ($(this).attr('class').indexOf(pattern) != -1) {
-			newField = $(this).attr('class').substr(pattern.length);
+		if ($(this).parent().attr('class').indexOf(pattern) != -1) {
+			newField = $(this).parent().attr('class').substr(pattern.length);
 			changeSort(newField);
 		}
 		return false;
