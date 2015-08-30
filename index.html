@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<link rel="stylesheet" href="main.css" type="text/css">
+	<meta charset="UTF-8">
+	<title>Petition sort</title>
+</head>
+<body>
+
+<div class="layout">
+	<header>
+		<div class="reducer">
+			<div class="header_top_container">
+				<div class="float_left">
+					<a class="small_text" href="http://www.president.gov.ua/">На головну сторінку Офіційного інтернет-представництва Президента України</a>
+				</div>
+				<div class="float_right">
+					<a href="/login">Вхід</a> | <a href="/registration">Реєстрація</a>
+				</div>
+			</div>
+			<div class="logo clearfix">
+				<div class="logo_img">
+					<a href="/">
+						<img src="/i/gerb.svg" alt="">
+					</a>
+				</div>
+				<div class="logo_text">
+					<p class="uppercase_text">Електронні петиції</p>
+					<p class="middle_text">Офіційне інтернет-представництво Президента України</p>
+				</div>
+			</div>
+			<nav class="nav">
+				<div class="nav_c">
+					<div class="nav_cc"> <a href="/petition/add">Створити електронну петицію</a> </div>
+				</div>
+				<div class="tar">
+					<form action="/search" method="get">
+						<input type="hidden" name="status" value="active" />
+						<input class="txt_input vat" type="text" name="text" value="" placeholder="Пошук електронних петицій" />
+						<input class="btn_input vat search" type="submit" value="">
+					</form>
+				</div>
+			</nav>
+		</div>
+	</header>
+
+	<section class="fltr light-border">
+		<div class="reducer">
+			<div class="list filter">
+				<div class="list_row">
+					<div class="list_elem_col">
+
+
+						<strong class="list_filter">Триває збір підписів</strong>
+
+						<a href="?status=in_process" class="novisited list_filter">На розгляді</a>
+
+						<a href="?status=processed" class="novisited list_filter">З відповіддю</a>
+						<a class="novisited list_filter" href="/petition/archive">Всі електронні петиції</a>
+
+
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+	<section>
+		<div class="list_header">
+			<div class="list_header_block">
+				<div class="reducer">
+					<div class="list">
+						<div class="list_row">
+							<div class="list_elem_col list_elem_col_head list_elem_title">Суть звернення</div>
+							<div class="list_elem_col list_elem_col_head list_elem_timer">Залишилося днів</div>
+							<div class="list_elem_col list_elem_col_head list_elem_vote">Зібрано підписів</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="reducer">
+			<div class="list">
+
+
+				<div class="list_row">
+					<div class="list_elem_col list_elem_title">
+						<h2><a href="/petition/638">ПОДАТКОВА ДЕКЛАРАЦІЯ</a></h2>
+					</div>
+					<div class="list_elem_col list_elem_timer"><em>Залишилось</em> <span>92</span> дні</div>
+					<div class="list_elem_col list_elem_vote"><span>59</span> <em>підпис</em></div>
+				</div>
+
+
+				<div class="list_row">
+					<div class="list_elem_col list_elem_title">
+						<h2><a href="/petition/636">УЧНІ В ШКОЛАХ</a></h2>
+					</div>
+					<div class="list_elem_col list_elem_timer"><em>Залишилось</em> <span>189</span> дні</div>
+					<div class="list_elem_col list_elem_vote"><span>34</span> <em>підпис</em></div>
+				</div>
+
+
+				<div class="list_row">
+					<div class="list_elem_col list_elem_title">
+						<h2><a href="/petition/635">Про заборону володіння і застосування вогнепальної зброї приватним особам, крім осіб, які у складі добровольчих батальйонів виконують завдання по захисту територіальної цілістності України в зоні бойових дій.</a></h2>
+					</div>
+					<div class="list_elem_col list_elem_timer"><em>Залишилось</em> <span>54</span> дні</div>
+					<div class="list_elem_col list_elem_vote"><span>34</span> <em>підпис</em></div>
+				</div>
+
+
+				<div class="list_row">
+					<div class="list_elem_col list_elem_title">
+						<h2><a href="/petition/634">ВЧИТЕЛІ В ШКОЛАХ ТА ВИКЛАДАЧІ В УНІВЕРСИТЕТАХ</a></h2>
+					</div>
+					<div class="list_elem_col list_elem_timer"><em>Залишилось</em> <span>92</span> дні</div>
+					<div class="list_elem_col list_elem_vote"><span>2</span> <em>підписи</em></div>
+				</div>
+
+
+				<div class="list_row">
+					<div class="list_elem_col list_elem_title">
+						<h2><a href="/petition/633">РОБОТА ТА КОНТРАКТ</a></h2>
+					</div>
+					<div class="list_elem_col list_elem_timer"><em>Залишилось</em> <span>92</span> дні</div>
+					<div class="list_elem_col list_elem_vote"><span>430</span> <em>підпис</em></div>
+				</div>
+
+
+				<div class="list_row">
+					<div class="list_elem_col list_elem_title">
+						<h2><a href="/petition/632">Знизити відсоткову ставку по кредитам в національній валюті</a></h2>
+					</div>
+					<div class="list_elem_col list_elem_timer"><em>Залишилось</em> <span>91</span> дні</div>
+					<div class="list_elem_col list_elem_vote"><span>439</span> <em>підпис</em></div>
+				</div>
+
+
+				<div class="list_row">
+					<div class="list_elem_col list_elem_title">
+						<h2><a href="/petition/631">Электронные учебники для школ! Огромная экономия бюджета семей и государства!</a></h2>
+					</div>
+					<div class="list_elem_col list_elem_timer"><em>Залишилось</em> <span>92</span> дні</div>
+					<div class="list_elem_col list_elem_vote"><span>30459</span> <em>підписи</em></div>
+				</div>
+
+
+				<div class="list_row">
+					<div class="list_elem_col list_elem_title">
+						<h2><a href="/petition/630">РУЙНУВАННЯ МОНОПОЛІЇ</a></h2>
+					</div>
+					<div class="list_elem_col list_elem_timer"><em>Залишилось</em> <span>92</span> дні</div>
+					<div class="list_elem_col list_elem_vote"><span>1</span> <em>підпис</em></div>
+				</div>
+
+			</div>
+			<div class="archive"></div>
+		</div>
+	</section>
+
+
+
+	<div class="footer_spacer"></div>
+	<footer>
+		<div class="reducer">
+			<nav class="footer_nav">
+				<a href="/about">Про електронні петиції Президенту України</a>
+				<a href="/law">Громадським об’єднанням</a>
+			</nav>
+			<div class="copy"><span>Усі права на матеріали, розміщені на цьому сайті, належать Адміністрації Президента України.<br />
+01220, м. Київ, вул. Банкова, 11. Довідкова Адміністрації Президента України — (044) 255-73-33</span></div>
+		</div>
+	</footer>
+</div>
+<script src="petition-sort.js"></script>
+</body>
+</html>

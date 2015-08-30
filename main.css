@@ -1,0 +1,1229 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+html {
+	height: 100%;
+	font-size: 1rem;
+	line-height: 1.6;
+}
+
+body {
+	height: 100%;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 14px;
+	color: #333;
+	background: #fff;
+}
+
+a {
+	color: #333;
+	outline: none;
+	text-decoration: none; }
+
+a:focus, a:active, a:hover {
+	color: #2f3f60 !important;
+	outline: none;
+	text-decoration: none;
+	-webkit-transition: all .3s ease 0s;
+	transition: all .3s ease 0s; }
+
+h1, h2, h3, h4, h5, h6 {
+	color: #333;
+	margin: 0;
+	font-family: "Georgia", serif;
+	font-weight: normal; }
+
+h1 {
+	font-size: 2rem;
+	line-height: 2.2rem;
+	padding-bottom: 20px; }
+
+h1 span {
+	font-size: 0.8rem;
+	line-height: 0.9rem;
+	text-transform: uppercase;
+	color: #666;
+	display:block;
+}
+
+h2 {
+	font-size: 1.5rem;
+	line-height: 2rem; }
+
+h3 {
+	font-size: 1.33rem;
+	line-height: 1.66rem; }
+
+h4 {
+	font-size: 1rem;
+	line-height: 1.38rem; }
+
+p {
+	padding-bottom: 15px;
+	line-height: 1.6;
+}
+
+.loader {
+	position: fixed;
+	z-index: 100;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(255,255,255,.5);
+}
+
+.loader_img {
+	background: white url('../i/loader.gif') 10px 50% no-repeat;
+	height: 50px;
+	width: 200px;
+	margin: 0 auto;
+	line-height: 50px;
+	text-indent: 60px;
+	color: #2424aa;
+	font-weight: 700;
+}
+
+.reducer {
+	max-width: 1140px;
+	margin: 0 auto;
+	padding: 0 30px;
+	position: relative;
+}
+
+.layout {
+	position: relative;
+	min-height: 100%;
+	min-width: 320px;
+	z-index: 2;
+}
+
+header {
+	padding: 0 0 20px;
+	overflow: hidden;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+	border-bottom: 1px solid rgba(204,204,204,.5);
+}
+
+.header_top_container {
+	padding: 7px 20px;
+	border: 1px solid rgba(204,204,204,.5);
+	border-top: none;
+	border-radius: 0 0 5px 5px;
+	margin-bottom:20px;
+	overflow:hidden;
+}
+
+.header_top_container .float_left a {
+	border-bottom: 1px solid transparent;
+	padding-bottom: 2px;
+	padding-left: 22px;
+	font-size: .7777777777777778rem;
+	line-height: 1.111111111111111rem;
+	text-decoration: none;
+	background: url(../i/home.png) no-repeat left 20%;
+}
+.header_top_container a:hover {
+	border-bottom-color: rgba(51, 51, 51, 0.2);
+}
+
+
+.logo {
+	overflow: hidden;
+	float: left;
+	display: block;
+	width:60%;
+}
+
+.logo_img {
+	height: 80px;
+	max-width: 80px;
+}
+
+.logo_img, .logo_text {
+	float: left;
+}
+
+.logo_text {
+	margin-left: 30px;
+	max-width: 80%;
+	line-height: 40px;
+	margin-top: 5px;
+}
+
+.uppercase_text {
+	text-transform: uppercase;
+	font-size: 18px;
+}
+
+.logo_text .middle_text {
+	color: #333;
+}
+
+.nav {
+	float: right;
+	font-size: 16px;
+	overflow: hidden;
+}
+
+.nav a {
+	margin-left: 165px;
+	margin-bottom:10px;
+	display: inline-block;
+	padding: 10px 0 10px 17px;
+	background:url('../i/new-petition.png') no-repeat left center;
+	font-size: 0.8rem;
+	line-height: 0.9rem;
+	text-transform: uppercase;
+	color: #666;
+}
+
+.list_filter {
+	text-transform: uppercase;
+	color: #333;
+	border-bottom: 2px solid #fc0;
+	margin-right:20px;
+	font-weight:normal;
+}
+
+.novisited.list_filter {
+	color: #666;
+	border-bottom: 2px solid transparent;
+}
+
+section {
+	padding: 30px 0;
+}
+
+section.fltr {
+	padding: 30px 0 0;
+}
+
+section.fltr.light-border {
+	border-bottom: 1px solid rgba(204,204,204,.5);
+	padding: 7px 0;
+}
+
+section.fltr.light-border .list_elem_col {
+	border:none;
+}
+
+/* end of modyfied styles*/
+
+
+.list_header {
+	height: 40px;
+	position: relative;
+	z-index: 20;
+}
+
+.list_header_block {
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 40px;
+	width: 100%;
+}
+
+.list_header_block.fixed {
+	position: fixed;
+	background: #fff;
+	-webkit-box-shadow: 0 0 10px gray;
+	-moz-box-shadow: 0 0 10px gray;
+	box-shadow: 0 0 10px gray;
+}
+
+.list_header_block.fixed .list_elem_col {
+	border-bottom: none;
+}
+
+.list {
+	display: table;
+	width: 100%;
+	table-layout: fixed;
+	border-collapse: collapse;
+}
+
+.list_row {
+	display: table-row;
+}
+
+.list_elem_col {
+	display: table-cell;
+	vertical-align: bottom;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	border-bottom: 1px solid #e7e7e7;
+}
+
+.list_elem_col.list_elem_col_head {
+	font-weight: 600;
+}
+
+.list_elem_col em {
+	display: none;
+	font-style: normal;
+}
+
+.list_elem_title {
+	width: 55%;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.list_elem_title h2 {
+	font-size: 16px;
+}
+
+.list_elem_timer, .list_elem_vote {
+	font-size: 14px;
+	text-align: right;
+	white-space: nowrap;
+}
+
+.list_elem_timer span, .list_elem_vote span {
+	font-size: 16px;
+}
+
+.list_row .homestraight {
+	color: #a31f10;
+	font-weight: 700;
+}
+
+.list_row .done {
+	color: #1f802d;
+	font-weight: 700;
+}
+
+.archive {
+	font-size: 14px;
+	padding-top: 20px;
+	padding-left: 5px;
+	padding-bottom: 10px;
+}
+
+.petition_author {
+	font-size: 14px;
+	padding-top: 20px;
+	color: #696969;
+}
+
+.petition_status {
+	font-size: 12px;
+	color: #696969;
+	padding-top: 2px;
+}
+
+.petition_date {
+	font-size: 12px;
+	padding-bottom: 30px;
+	color: #696969;
+	padding-top: 2px;
+}
+
+.petition_additional {
+	position: absolute;
+	width: 250px;
+	right: 30px;
+	top: 0;
+	padding-bottom: 20px;
+}
+
+.petition_votes {
+	font-size: 16px;
+	width: 250px;
+	height: 250px;
+	-webkit-border-radius: 100%;
+	-moz-border-radius: 100%;
+	border-radius: 100%;
+	background: #e3e3e3;
+	position: relative;
+}
+
+.petition_votes_graph {
+	position: relative;
+	z-index: 1;
+}
+
+.petition_votes_txt {
+	position: absolute;
+	z-index: 2;
+	left: 0;
+	top: 90px;
+	width: 250px;
+	height: 50px;
+	text-align: center;
+}
+
+.petition_votes span {
+	font-size: 36px;
+	line-height: 1;
+}
+
+.petition_timer {
+	font-size: 16px;
+	text-align: center;
+	padding-top: 20px;
+}
+
+.petition_timer span {
+	font-size: 36px;
+}
+
+.petition_btn {
+	display: inline-block;
+	color: #fff;
+	cursor: pointer;
+	font: 1rem/1rem Georgia, "Times New Roman", Times, serif;
+	background: #ffcc00;
+	border:1px solid #ffcc00;
+	border-radius:23px;
+	padding: 15px;
+	margin: 20px 0px;
+}
+
+.petition_btn.green {
+	margin: 0px;
+	background: #1f802d;
+	font-weight: 400;
+	font-size: 14px;
+	padding: 7px 15px;
+}
+
+.petition_btn.red {
+	margin: 0px;
+	background: #a3121f;
+	font-weight: 400;
+	font-size: 14px;
+	padding: 7px 15px;
+}
+
+.petition_btn.disabled {
+	color: #909090;
+	cursor: auto;
+	background: #cccccc;
+	border:1px solid #cccccc;
+}
+
+.petition {
+	margin-right: 280px;
+}
+
+.add_petition_done h2 {
+	padding-bottom: 20px;
+}
+
+.answer {
+	overflow: hidden;
+	padding: 20px 0px;
+}
+
+.answer_img {
+	line-height: 0;
+	font-size: 0;
+	float: left;
+	width: 75px;
+	margin-right: -100%;
+}
+
+.answer_txt {
+	/*margin-left: 85px;*/
+}
+
+.answer_txt {
+	/*margin-left: 85px;*/
+}
+
+.answer_txt_header {
+	font-size: 0.8rem;
+	line-height: 0.9rem;
+	text-transform: uppercase;
+	color: #666;
+	padding-bottom: 10px;
+}
+
+.voters {
+	padding: 20px 0;
+}
+
+.voters a {
+	font-size: 0.8rem;
+	line-height: 0.9rem;
+	text-transform: uppercase;
+	color: #666;
+}
+
+.voters h3 {
+	font-size: 16px;
+	line-height: 20px;
+	padding-bottom: 10px;
+}
+
+ol li {
+	padding-left:20px;
+	list-style-position:inside;
+}
+
+.voter {
+	padding-bottom: 10px;
+}
+
+.pagination {
+	padding: 10px 0px;
+}
+
+.pagination span, .pagination a {
+	margin-right: 15px;
+}
+
+.filter .tar {
+	width: 410px;
+}
+
+.error_txt {
+	color: #a31f10;
+	padding-top: 3px;
+	font-style: italic;
+}
+
+.txt_area {
+	height: 200px;
+	width: 100%;
+	resize: none;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 10px;
+	border: 1px solid rgba(204,204,204,.5);
+	border-radius:19px;
+	font: 0.8rem/0.9rem Georgia, "Times New Roman", Times, serif;
+}
+
+.txt_area_small {
+	height: 38px;
+}
+
+.txt_input {
+	outline:none;
+	height: 38px;
+	width: 100%;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 0 10px;
+	border: 1px solid rgba(204,204,204,.5);
+	border-radius:19px;
+	font: 0.8rem/0.9rem Georgia, "Times New Roman", Times, serif;
+}
+
+nav .txt_input {
+	width: 300px;
+}
+
+.txt_area.error, .txt_input.error {
+	border: 1px solid #a31f10;
+}
+
+.btn_input {
+	min-width: 100%;
+	border: 2px solid #fff;
+	border-radius: 20px;
+	background: 0 0;
+	padding: 10px 20px;
+	font-size: .77rem;
+	line-height: 1.11rem;
+	text-transform: uppercase;
+	color: #fff;
+	font-family: Georgia,serif;
+	outline:none;
+}
+
+.btn_input.disabled {
+	color: #909090;
+	cursor: auto;
+	border:2px solid #909090;
+}
+
+.small {
+	padding: 0px 15px;
+	height: 30px;
+}
+
+.btn_input.search,
+.btn_input.search.disabled {
+	height:40px;
+	margin-left:-34px;
+	background:url(/i/search.png) no-repeat left center;
+	width:40px;
+	min-width:40px;
+	border:none;
+	cursor:pointer;
+}
+
+.btn_input.search:hover,
+.btn_input.search:active {
+	background:url(/i/search.png) no-repeat -40px center;
+	border:none;
+}
+
+.form_grid {
+	display: table;
+	table-layout: fixed;
+	margin-top: 15px;
+	background: #2f3f60;
+	padding:30px;
+	min-width:50%;
+}
+
+.form_grid.add_petition_form {
+	min-width:80%;
+}
+
+.form_grid_row {
+	display: table-row;
+}
+
+.form_grid_cell {
+	display: table-cell;
+	vertical-align: top;
+	padding-bottom: 10px;
+}
+
+.form_grid_cell label {
+	color: #fff;
+}
+
+.form_grid_cell,
+.form_grid_cell a {
+	color: #fff;
+}
+
+.form_grid_cell,
+.form_grid_cell a,
+.btn-section a,
+.btn-section {
+	color: #fff;
+}
+
+.form_grid_cell a,
+.btn-section a {
+	text-decoration:underline;
+}
+
+.form_grid_cell a:hover,
+.btn-section a:hover {
+	text-decoration:none;
+	color: #fff !important;
+}
+
+.form_grid_cell.lbl {
+	padding-right:20px;
+	font-size: .7777777777777778rem;
+	line-height: 1.111111111111111rem;
+	color: #fff;
+	white-space: nowrap;
+	width:10px;
+}
+
+.btn-section {
+	display: table;
+	table-layout: fixed;
+	background: #2f3f60;
+	padding:30px;
+	min-width:50%;
+	border-top: 1px solid rgba(255,255,255,.2);
+}
+
+.btn-section-left {
+	display:table-cell;
+	vertical-align:top;
+	width:300px;
+	overflow:hidden;
+}
+
+.btn-section-right {
+	display:table-cell;
+	padding-left:7px;
+	vertical-align:top;
+}
+
+.btn-section p {
+	display:table-row;
+}
+
+.footer_spacer {
+	height: 60px;
+}
+
+footer {
+	height: 40px;
+	padding: 20px 0 0;
+	width: 100%;
+	left: 0;
+	bottom: 0;
+	position: absolute;
+	line-height: 20px;
+	font-size: 12px;
+	color: #535353;
+	border-top: 1px solid rgba(204,204,204,.5);
+}
+
+.footer_nav {
+	text-align:center;
+}
+
+.footer_nav a {
+	color: #333;
+	white-space: nowrap;
+	margin:0 30px;
+	font-size:1rem;
+}
+
+.footer_nav a:hover {
+	border-bottom: 1px solid rgba(51,51,51,.2);
+}
+
+.copy {
+	margin: 20px 0;
+	text-align:center;
+}
+
+.copy span {
+	display: inline-block;
+	padding-left:50px;
+	background:url(../i/gerb-sm.png) no-repeat left center;
+}
+
+.fade {
+	position: fixed;
+	z-index: 30;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: #000;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+	filter: alpha(opacity=50);
+	-moz-opacity: 0.5;
+	-khtml-opacity: 0.5;
+	opacity: 0.5;
+}
+
+.popup {
+	position: absolute;
+	left: 0;
+	top: 0px;
+	z-index: 31;
+	width: 100%;
+}
+
+.popup_container {
+	background: #fff;
+	position: relative;
+	margin: 0 auto;
+	max-width: 600px;
+}
+
+.popup_close {
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	right: 10px;
+	top: 10px;
+	z-index: 2;
+	background: #ffcc00;
+	-webkit-border-radius: 100%;
+	-moz-border-radius: 100%;
+	border-radius: 100%;
+	cursor: pointer;
+	color: #fff;
+	text-align: center;
+	font-size: 30px;
+	line-height: 28px;
+}
+
+.popup_content {
+	position: relative;
+	z-index: 1;
+	padding: 20px;
+}
+
+.popup_content h2 {
+	padding-bottom: 20px;
+}
+
+.float_left {
+	float:left;
+}
+
+.float_right {
+	float:right;
+}
+
+.vote-pet-title {
+	margin-top:10px;
+	font-size: 14px;
+	color: #333;
+	text-transform: uppercase;
+	letter-spacing: .1em;
+	text-align:center;
+	margin:14px 0;
+}
+
+.share-title {
+	margin-top:10px;
+	font-size: 14px;
+	line-height: 40px;
+	color: #333;
+	text-transform: uppercase;
+	letter-spacing: .1em;
+}
+
+.share {
+	padding-left:60px;
+}
+
+.vote-mssg {
+	margin-bottom: 16px;
+	text-align: center;
+	color: #a31f10;
+	border:1px solid #a31f10;
+	padding:10px;
+}
+
+.vote-mssg a {
+	color: #a31f10;
+	border-bottom:1px dotted #a31f10;
+	font-weight:bold;
+}
+
+.cc .petition_btn {
+	margin:20px 60px;
+}
+
+@media only screen and (min-width:610px) and (max-width:885px) {
+	.logo {
+		width: 100%;
+	}
+
+	.logo,  .nav {
+		float: none;
+	}
+
+	.nav {
+		padding-top: 17px;
+	}
+
+	.nav a {
+		margin-left: 0px;
+		margin-right: 10px;
+		padding: 5px 10px 5px 17px;
+	}
+
+	.nav .tar {
+		text-align:left;
+	}
+
+	.float_left {
+		float:none;
+	}
+
+	.float_right {
+		float:none;
+	}
+
+	.btn-section-right,
+	.btn-section-left {
+		display: block;
+	}
+}
+@media only screen and (min-width:830px) and (max-width:950px) {
+
+	.txt_area {
+		width: 100%;
+		max-width: 500px;
+	}
+
+	.float_left {
+		float:none;
+	}
+
+	.float_right {
+		float:none;
+	}
+
+	.btn-section-right,
+	.btn-section-left {
+		display: block;
+	}
+}
+@media only screen and (min-width:610px) and (max-width:829px) {
+
+	header {
+		padding: 15px 0;
+	}
+
+	.list_header {
+		display: none;
+	}
+
+	.logo img {
+		height: 52px;
+	}
+
+	.logo_img {
+		height: 52px;
+		width: 60px;
+	}
+
+	.logo_text {
+		margin-left: 1px;
+		line-height: 10px;
+		margin-top: 0;
+	}
+
+	.logo_text p {
+		padding-bottom: 10px;
+		line-height: 1.3;
+	}
+
+	.list,  .list_row {
+		display: block;
+	}
+
+	.list_row {
+		padding-bottom: 5px;
+		margin-bottom: 15px;
+		border-bottom: 1px solid #e7e7e7;
+	}
+
+	.list_elem_col {
+		display: block;
+		border-bottom: none;
+		padding: 0 5px;
+	}
+
+	.list_elem_col em {
+		display: inline;
+	}
+
+	.list_elem_title {
+		width: auto;
+		padding-bottom: 2px;
+	}
+
+	.list_elem_timer,  .list_elem_vote {
+		text-align: left;
+		font-size: 13px;
+	}
+
+	.list_elem_timer {
+		padding-bottom: 2px;
+	}
+
+	.list_elem_vote {
+		padding-bottom: 5px;
+	}
+
+	.list_elem_timer span,  .list_elem_vote span {
+		font-size: 14px;
+	}
+
+	.filter .tar {
+		text-align: left;
+		width: auto;
+	}
+
+	.filter .tar .txt_input,  .filter .tar .btn_input {
+		margin-top: 5px;
+	}
+
+	.petition {
+		margin-right: 0;
+	}
+
+	.petition_additional {
+		position: relative;
+		right: auto;
+		margin: 0 auto;
+	}
+
+	.petition_additional.full {
+		width: auto;
+	}
+
+	.footer_spacer {
+		height: 60px;
+	}
+
+	footer {
+		height: 60px;
+		padding-bottom: 10px;
+	}
+
+	.footer_nav {
+		float: none;
+	}
+
+	.footer_nav a {
+		margin-left: 0;
+		margin-right: 15px;
+	}
+	.float_left {
+		float:none;
+	}
+
+	.float_right {
+		float:none;
+	}
+
+	.btn-section-right,
+	.btn-section-left {
+		display: block;
+	}
+}
+@media only screen and (min-width:0px) and (max-width:609px) {
+
+	header {
+		padding: 10px 0;
+	}
+
+	.logo_text {
+		padding-top: 10px;
+	}
+
+	.list_header {
+		display: none;
+	}
+
+	.logo,  .nav {
+		float: none;
+	}
+
+	.nav {
+		padding-top: 17px;
+	}
+
+	.nav a {
+		margin-left: 0px;
+		margin-right: 10px;
+		padding: 5px 10px 5px 17px;
+	}
+
+	.nav .tar {
+		text-align:left;
+	}
+
+	.logo img {
+		height: 52px;
+	}
+
+	.logo_img {
+		height: 52px;
+		width:60px;
+	}
+
+	.logo_text {
+		margin-left: 1px;
+		line-height: 10px;
+		margin-top: 0;
+	}
+
+	.logo_text p {
+		padding-bottom: 10px;
+		line-height: 1.3;
+	}
+
+	.list,  .list_row {
+		display: block;
+	}
+
+	.list_row {
+		padding-bottom: 5px;
+		margin-bottom: 15px;
+		border-bottom: 1px solid #e7e7e7;
+	}
+
+	.list_elem_col {
+		display: block;
+		border-bottom: none;
+		padding: 0 5px;
+	}
+
+	.list_elem_col em {
+		display: inline;
+	}
+
+	.list_elem_title {
+		width: auto;
+		padding-bottom: 2px;
+	}
+
+	.list_elem_timer,  .list_elem_vote {
+		text-align: left;
+		font-size: 13px;
+	}
+
+	.list_elem_timer {
+		padding-bottom: 2px;
+	}
+
+	.list_elem_vote {
+		padding-bottom: 5px;
+	}
+
+	.list_elem_timer span,  .list_elem_vote span {
+		font-size: 14px;
+	}
+
+	.filter .tar {
+		text-align: left;
+		width: auto;
+	}
+
+	.filter .tar .txt_input,  .filter .tar .btn_input {
+		margin-top: 5px;
+	}
+
+	h1 {
+		font-size: 22px;
+	}
+
+	h2 {
+		font-size: 18px;
+		font-weight: normal;
+	}
+
+	.petition {
+		margin-right: 0;
+	}
+
+	.petition_additional {
+		position: relative;
+		right: auto;
+		margin: 0 auto;
+	}
+
+	.petition_additional.full {
+		width: auto;
+	}
+
+	.form_grid,
+	.btn-section {
+		display: block;
+	}
+
+	.form_grid_row,
+	.btn-section-right,
+	.btn-section-left {
+		display: block;
+	}
+
+	.form_grid_cell {
+		display: block;
+	}
+
+	.form_grid_cell.lbl {
+		padding-bottom: 0;
+		font-size: 14px;
+	}
+
+	.txt_input,  .txt_area {
+		width: 100%;
+	}
+
+	.footer_spacer {
+		height: 60px;
+	}
+
+	footer {
+		height: 60px;
+		padding-bottom: 10px;
+	}
+
+	.footer_nav {
+		float: none;
+	}
+
+	.footer_nav a {
+		margin-left: 0;
+		margin-right: 15px;
+	}
+
+	.pagination span,  .pagination a {
+		display: inline-block;
+	}
+
+	.pagination .prev_next {
+		display: none;
+	}
+	.float_left {
+		float:none;
+	}
+
+	.float_right {
+		float:none;
+	}
+}
+@media only screen and (min-width:0px) and (max-width:350px) {
+
+	.pagination span,  .pagination a {
+		display: inline-block;
+	}
+
+	.pagination .prev_next {
+		display: none;
+	}
+	/*
+		.answer_img {
+			margin-right: 10px;
+		}
+		.answer_txt {
+			margin-left: 0px;
+		}
+		.answer_txt_header {
+			height: 75px;
+			display: table-cell;
+			vertical-align: middle;
+			width: 100px;
+		}
+		*/
+}
+
+.no_indent {
+	padding: 0;
+	margin: 0;
+}
+
+.c {
+	float: right;
+	position: relative;
+	right: 50%;
+}
+
+.cc {
+	float: left;
+	position: relative;
+	left: 50%;
+}
+
+.hidden {
+	display: none;
+}
+
+.clear {
+	clear: both;
+}
+
+.ovh {
+	overflow: hidden;
+}
+
+.tar {
+	text-align: right;
+}
+
+.vat {
+	vertical-align: top;
+}
