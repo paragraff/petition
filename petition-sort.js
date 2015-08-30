@@ -2,7 +2,33 @@
 	'use strict';
 	var list = $('section div.reducer div.list:not(:only-child)'),
 		header = $('section div.list_header_block div.list'),
-		sort = 'none';
+		field = 'none',
+		direction = 'asc';
+
+	header.find('.list_elem_col_head')
+		.wrapInner('<a href="#"></a>')
+		.click(userActionClickSort);
+
+	function userActionClickSort() {
+		var newField,
+			pattern = 'list_elem_col list_elem_col_head list_elem_';
+		if ($(this).attr('class').indexOf(pattern) != -1) {
+			newField = $(this).attr('class').substr(pattern.length);
+			changeSort(newField);
+		}
+		return false;
+	}
+
+	function changeSort(newField) {
+		if (newField == field) {
+			// кликнули повторно по полю, значит нужно сменить направление сортировки
+			direction = direction == 'asc' ? 'desc' : 'asc';
+		} else {
+			field = newField;
+			direction = 'asc';
+		}
+		sort(field, direction);
+	}
 
 	function sortAscByAttribute(a, b) {
 		var result,
@@ -24,15 +50,15 @@
 
 	function getValue(elem) {
 		var value = 0;
-		if (sort != 'title') {
-			value = parseInt($(elem).find('.list_elem_' + sort).find('span').text(), 10)
+		if (field != 'title') {
+			value = parseInt($(elem).find('.list_elem_' + field).find('span').text(), 10)
 		} else {
-			value = $(elem).find('.list_elem_' + sort).find('a').text();
+			value = $(elem).find('.list_elem_' + field).find('a').text();
 		}
 		return value;
 	}
-	global.sort = function (field, type) {
-		sort = field;
+	function sort(newField, type) {
+		field = newField;
 		if (type == 'asc') {
 			list.children('.list_row').sort(sortAscByAttribute).appendTo(list);
 		} else if (type == 'desc') {
